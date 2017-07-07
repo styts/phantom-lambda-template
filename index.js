@@ -4,7 +4,7 @@ var phantomjs = require('phantomjs-prebuilt');
 exports.handler = function(event, context, callback) {
     var phantom = phantomjs.exec('phantomjs-script.js', event.url);
 
-    let html = ''
+    var html = ''
     phantom.stdout.on('data', function(buf) {
       html += String(buf)
     });
