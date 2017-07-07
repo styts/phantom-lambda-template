@@ -8,6 +8,7 @@ Resources:
     Properties:
       Handler: index.handler
       Runtime: nodejs6.10
+      Timeout: 20
       Description: Get event.url via phantomjs and render
       CodeUri: .
 

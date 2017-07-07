@@ -1,8 +1,10 @@
-var system = require('system');
-var page   = require('webpage').create();
-var url    = system.args[1];
+var system = require("system");
+var page = require("webpage").create();
+var url = system.args[1];
 
-page.open(url, function () {
+page.onError = function(msg, trace) {};
+
+page.open(url, function() {
   console.log(page.content);
   phantom.exit();
 });
